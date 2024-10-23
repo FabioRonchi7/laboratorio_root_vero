@@ -1,5 +1,5 @@
 #include "ParticleType.hpp"
-
+//comment
 class Particle
 {
 public:
@@ -26,6 +26,11 @@ public:
     double Calc_total_E() const;
 
     double InvariantMass(Particle &p);
+
+    int Decay2body(Particle &dau1,Particle &dau2) const;
+   private:
+  void Boost(double bx, double by, double bz);
+
 
 private:
     static int FindParticle(const char *name);
